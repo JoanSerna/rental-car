@@ -1,0 +1,23 @@
+.container {
+  display: grid;
+
+  grid-template-areas: "header header header"
+                       "main main main";
+  grid-gap: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+  margin: 0 2rem;
+  @media only screen and (min-width: 767px) {
+    margin-right: 4rem;
+
+  }
+}

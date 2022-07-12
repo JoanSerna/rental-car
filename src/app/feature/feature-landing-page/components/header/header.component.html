@@ -1,0 +1,20 @@
+<div class="header">
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon"
+            aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Rental Car</span>
+    <span class="example-spacer"></span>
+  </mat-toolbar>
+  <form [formGroup]="formSearchCar" *ngIf="formSearchCar"
+        class="header__search">
+    <mat-form-field appearance="fill">
+      <mat-label>Search by Brand</mat-label>
+      <span matPrefix>
+      <mat-icon>search</mat-icon>
+    </span>
+      <input type="search" matInput formControlName="brand">
+    </mat-form-field>
+  </form>
+</div>

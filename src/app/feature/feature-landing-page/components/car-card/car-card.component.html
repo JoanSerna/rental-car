@@ -1,0 +1,23 @@
+<mat-card class="car" *ngIf="car">
+  <mat-card-header>
+    <mat-card-title>{{car.brand}} {{car.model}}</mat-card-title>
+    <mat-card-subtitle>{{car.year}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image
+       [src]="car.photo"
+       loading="lazy"
+       [alt]="car.brand + ' ' + car.model">
+  <mat-card-content>
+    <mat-list role="list">
+      <ul>
+        <li class="mat-caption">Caballos de fuerza: {{car.horsepower}}</li>
+        <li class="mat-caption">Aceleración: {{car.acceleration}}</li>
+        <li class="mat-caption">Peso: {{car.weight_in_lbs}}</li>
+        <li class="mat-caption">Precio: {{car.price | currency}} </li>
+      </ul>
+    </mat-list>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button color="primary">VER DETALLES</button>
+  </mat-card-actions>
+</mat-card>
